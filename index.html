@@ -1,33 +1,56 @@
+<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Tic Tac Toe</title>
+    <title>Document</title>
 </head>
 <body>
-    <div class="new-container hide">
-        <p id="win">Winner!</p>
-        <button id="newbtn">New Game</button>
-    </div>
-    <main>
-        <h1>Tic Tac Toe</h1>
-    <div class="container">
-        <div class="game">
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-            <button class="box"></button>
-        </div>
-    </div>
-    <button id="btn">Reset</button>
-    </main>
+
+<div class="app">
+
+<h1>Advanced Tic Tac Toe</h1>
+
+<div class="settings">
+
+<label>Board Size</label>
+<select id="boardSize">
+<option value="3">3 × 3</option>
+<option value="4">4 × 4</option>
+<option value="5">5 × 5</option>
+<option value="6">6 × 6</option>
+</select>
+
+<label>Mode</label>
+<select id="mode">
+<option value="pvp">Player vs Player</option>
+<option value="ai">Player vs AI</option>
+</select>
+
+<button id="start">Start Game</button>
+
+</div>
+
+<div class="scoreboard">
+<p>X Wins: <span id="xScore">0</span></p>
+<p>O Wins: <span id="oScore">0</span></p>
+<p>Draws: <span id="drawScore">0</span></p>
+</div>
+
+<div id="gameBoard" class="board"></div>
+
+<div class="controls">
+<button id="undo">Undo</button>
+<button id="reset">Reset</button>
+</div>
+
+<p id="status"></p>
+
+</div>
+
+<script src="app.js"></script>
+
 </body>
-<script src="ttt.js"></script>
 </html>
